@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<testsuite errors="5" failures="0" name="ProjectTests-20200103140413" tests="9" time="0.606">
+	<testcase classname="ProjectTests" name="test_auth" time="0.109"/>
+	<testcase classname="ProjectTests" name="test_items" time="0.011"/>
+	<testcase classname="ProjectTests" name="test_main_page" time="0.002"/>
+	<testcase classname="ProjectTests" name="test_register" time="0.006"/>
+	<testcase classname="ProjectTests" name="test_delete" time="0.046">
+		<error message="Expecting value: line 1 column 1 (char 0)" type="JSONDecodeError">
+<![CDATA[Traceback (most recent call last):
+  File "tests/test.py", line 156, in test_delete
+    assert response.json()["message"] == "item deleted"
+  File "/Volumes/bruvio128/Dropbox/work/REST-API/flask/section6/venv/lib/python3.5/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+]]>		</error>
+	</testcase>
+	<testcase classname="ProjectTests" name="test_post_resource_already_exists" time="0.300">
+		<error message="" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "tests/test.py", line 94, in test_post_resource_already_exists
+    assert response.status_code == 400
+AssertionError
+]]>		</error>
+	</testcase>
+	<testcase classname="ProjectTests" name="test_post_resource_doesnot_exist" time="0.060">
+		<error message="" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "tests/test.py", line 111, in test_post_resource_doesnot_exist
+    assert response.status_code == 201
+AssertionError
+]]>		</error>
+	</testcase>
+	<testcase classname="ProjectTests" name="test_put_resource_doesnot_exist" time="0.041">
+		<error message="" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "tests/test.py", line 126, in test_put_resource_doesnot_exist
+    assert response.status_code == 201
+AssertionError
+]]>		</error>
+	</testcase>
+	<testcase classname="ProjectTests" name="test_put_resource_exists" time="0.032">
+		<error message="" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "tests/test.py", line 141, in test_put_resource_exists
+    assert response.status_code == 201
+AssertionError
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[User already registered 
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="ProjectTests-20200103162652" tests="9" time="0.420">
+	<testcase classname="ProjectTests" name="test_auth" time="0.084"/>
+	<testcase classname="ProjectTests" name="test_delete" time="0.071"/>
+	<testcase classname="ProjectTests" name="test_items" time="0.019"/>
+	<testcase classname="ProjectTests" name="test_main_page" time="0.003"/>
+	<testcase classname="ProjectTests" name="test_post_resource_doesnot_exist" time="0.108"/>
+	<testcase classname="ProjectTests" name="test_put_resource_doesnot_exist" time="0.040"/>
+	<testcase classname="ProjectTests" name="test_put_resource_exists" time="0.045"/>
+	<testcase classname="ProjectTests" name="test_register" time="0.010"/>
+	<testcase classname="ProjectTests" name="test_post_resource_already_exists" time="0.041">
+		<error message="" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "tests/test.py", line 94, in test_post_resource_already_exists
+    assert response.status_code == 400
+AssertionError
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[User already registered 
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

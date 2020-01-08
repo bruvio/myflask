@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="ProjectTests-20200103163625" tests="9" time="0.427">
+	<testcase classname="ProjectTests" name="test_auth" time="0.059"/>
+	<testcase classname="ProjectTests" name="test_delete" time="0.030"/>
+	<testcase classname="ProjectTests" name="test_items" time="0.016"/>
+	<testcase classname="ProjectTests" name="test_main_page" time="0.002"/>
+	<testcase classname="ProjectTests" name="test_post_resource_already_exists" time="0.126"/>
+	<testcase classname="ProjectTests" name="test_post_resource_doesnot_exist" time="0.041"/>
+	<testcase classname="ProjectTests" name="test_put_resource_doesnot_exist" time="0.041"/>
+	<testcase classname="ProjectTests" name="test_put_resource_exists" time="0.103"/>
+	<testcase classname="ProjectTests" name="test_register" time="0.010"/>
+	<system-out>
+<![CDATA[User already registered 
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
