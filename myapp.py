@@ -6,7 +6,7 @@ from resources.user import UserRegister
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
-from db import db
+# from db import db
 from datetime import timedelta
 
 # import unittest
