@@ -5,7 +5,7 @@ from security_class import authenticate, identity
 from resources.user import UserRegister
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
-
+import os
 # from db import db
 from datetime import timedelta
 
@@ -14,7 +14,8 @@ from datetime import timedelta
 app = Flask(__name__)
 app.config[
     "SQLALCHEMY_DATABASE_URI"
-] = "sqlite:///data.db"  # where to find the database
+] = os.environ.get('DATABASE_URL','sqlite:///data.db')#  # where to find the database
+
 app.config[
     "SQLALCHEMY_TRACK_MODIFICATIONS"
 ] = False  # sql alchemy has its own modification tracker
