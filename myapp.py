@@ -22,22 +22,6 @@ app.secret_key = "br1"
 api = Api(app)
 
 
-@app.before_first_request 
-def create_tables():
-    from models.user import UserModel
-    from models.item import ItemModel
-
-    db.create_all() # sql alchemy creates the tables that it sees and this works through imports
-    admin = UserModel("bruno", "asdf")
-    test = ItemModel("test", "10.99",'1')
-    desk = ItemModel("desk", "11.99",'1')
-    db.session.add(test)
-    db.session.add(desk)
-    
-    db.session.add(admin)
-    db.session.commit()
-
-
 # config JWT to expire within half an hour
 app.config["JWT_EXPIRATION_DELTA"] = timedelta(seconds=1800)
 jwt = JWT(app, authenticate, identity)  # allows authentication of users /auth
